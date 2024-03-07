@@ -7,9 +7,10 @@ public class GameManager : MonoBehaviour
     public int[] ansQuiz = new int[10];
     int ans;
     public int currentquiz;
-    int correctNum;
+    public static int correctNum;
     float startTime;
     public float timer;
+    public static float finishTime;
     bool ansered;
     bool finish;
     [SerializeField] SceneChanger sceneChanger;
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
         currentquiz = 1;
         correctNum = 0;
         startTime = Time.time;
+        finishTime = 0;
         ansered = false;
         finish = false;
     }
@@ -53,6 +55,7 @@ public class GameManager : MonoBehaviour
 
         if(currentquiz == 11)
         {
+            finishTime = timer;
             finish = true;
             sceneChanger.ToResult();
         }
