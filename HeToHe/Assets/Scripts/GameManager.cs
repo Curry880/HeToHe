@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public enum Level {esey, normal, hard };
+    public static Level level;
     public int[] ansQuiz = new int[10];
     int ans;
     public int currentquiz;
@@ -13,7 +15,9 @@ public class GameManager : MonoBehaviour
     public static float finishTime;
     bool ansered;
     bool finish;
+    [SerializeField] UIUpdate uIUpdate;
     [SerializeField] SceneChanger sceneChanger;
+    [SerializeField] SEManager sEManager;
     void Start()
     {
         for(int i = 0; i < 10; i++)
@@ -29,6 +33,7 @@ public class GameManager : MonoBehaviour
         finishTime = 0;
         ansered = false;
         finish = false;
+        uIUpdate.QuizUpdate(level);
     }
 
     // Update is called once per frame
@@ -53,23 +58,35 @@ public class GameManager : MonoBehaviour
         ans = 2;
         ansered = false;
 
-        if(currentquiz == 11)
+        if (currentquiz == 11)
         {
             finishTime = timer;
             finish = true;
             sceneChanger.ToResult();
         }
+        uIUpdate.QuizUpdate(level);
     }
 
     void ResultEffect(bool correct)
     {
         if(correct == true)
         {
-            
+            sEManager.CorrectSE();
         }
         else
         {
+            sEManager.WrongSE();
+        }
+        //WaitSecond(10f);
+    }
 
+    void WaitSecond(float time)
+    {
+        float finishTime = Time.time + time;
+        float nowTime = Time.time;
+        while(nowTime < finishTime)
+        {
+            nowTime = Time.time;
         }
     }
 
