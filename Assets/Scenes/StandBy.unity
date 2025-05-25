@@ -464,6 +464,7 @@ GameObject:
   - component: {fileID: 1005869698}
   - component: {fileID: 1005869700}
   - component: {fileID: 1005869699}
+  - component: {fileID: 1005869701}
   m_Layer: 5
   m_Name: HeHira
   m_TagString: Untagged
@@ -480,7 +481,7 @@ RectTransform:
   m_GameObject: {fileID: 1005869697}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 168048582}
@@ -513,7 +514,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 47d6a3c81cf6b34408fb48528761b75b, type: 3}
-    m_FontSize: 300
+    m_FontSize: 130
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -533,6 +534,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005869697}
   m_CullTransparentMesh: 1
+--- !u!114 &1005869701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005869697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b8d2c5eda814d48922fe2f230bf060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1314061712
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,6 +989,7 @@ GameObject:
   - component: {fileID: 2086249234}
   - component: {fileID: 2086249236}
   - component: {fileID: 2086249235}
+  - component: {fileID: 2086249237}
   m_Layer: 5
   m_Name: HeKata
   m_TagString: Untagged
@@ -992,7 +1006,7 @@ RectTransform:
   m_GameObject: {fileID: 2086249233}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1613329219}
@@ -1025,7 +1039,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 47d6a3c81cf6b34408fb48528761b75b, type: 3}
-    m_FontSize: 300
+    m_FontSize: 130
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -1045,3 +1059,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2086249233}
   m_CullTransparentMesh: 1
+--- !u!114 &2086249237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086249233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b8d2c5eda814d48922fe2f230bf060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

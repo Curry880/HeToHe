@@ -74,10 +74,10 @@ public class InGameManager : MonoBehaviour
             case Level.Esey:
                 break;
             case Level.Normal:
-                quizText.fontSize = Random.Range(72, 110);
+                quizText.fontSize = Random.Range(72, 200);
                 break;
             case Level.Hard:
-                quizText.fontSize = Random.Range(72, 110);
+                quizText.fontSize = Random.Range(72, 200);
                 quizText.transform.Rotate(0, 0, Random.Range(-90, 90));
                 break;
         }
